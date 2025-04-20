@@ -1,0 +1,107 @@
+1. REF_DATE
+What it Represents: The reference date or year (or sometimes quarter) for the data.
+
+Example Value: 2002
+This tells you the year for which the data was collected or is valid.
+
+2. GEO
+What it Represents: The geographical region that the data pertains to.
+
+Example Value: Canada
+This indicates that the statistics are for the entire country of Canada.
+
+3. DGUID (Dissemination Geography Unique Identifier)
+What it Represents: A unique code used by Statistics Canada to identify a specific geographic area.
+
+Example Value: 2021A000011124
+This code can be used internally or when merging data from other tables that use the same DGUID format.
+
+4. Age group
+What it Represents: The particular age bracket or population segment covered by the data.
+
+Example Value: Total, 15 years and over
+This means the statistic applies to everyone aged 15 and older, without further subdivision.
+
+5. Gender
+What it Represents: The gender breakdown or classification of the persons covered by the statistic.
+
+Example Value: Total, gender of person
+Indicates that the data includes all genders (i.e., no separate breakdown by male/female or other categories).
+
+6. Indicators
+What it Represents: The specific mental health measure or indicator being reported.
+
+Example Value: Major depressive episode, life
+This means the data point corresponds to lifetime prevalence of major depressive episodes (i.e., how many people have had a major depressive episode at any point in their life).
+
+7. Characteristics
+What it Represents: Describes the nature of the statistic being measured (often the type of count, rate, or percentage).
+
+Example Value: Number of persons
+Tells you that this data is a simple count of individuals (not a rate, not a percentage).
+
+8. UOM (Unit of Measure)
+What it Represents: The unit or scale in which the data is being expressed.
+
+Example Value: Number
+Indicates that the statistic is measured in “number of persons,” i.e., a raw count.
+
+9. UOM_ID
+What it Represents: An internal numeric code used by Statistics Canada or the data provider to represent the unit of measure.
+
+Example Value: 223
+This code ties “Number” to a specific internal reference.
+
+10. SCALAR_FACTOR
+What it Represents: The multiplier or divisor needed to interpret the value (e.g., “units,” “thousands,” “millions”).
+
+Example Value: units
+If it said “thousands,” you would multiply the value by 1,000. Here, “units” means no scaling factor is applied (the data is already in “raw units”).
+
+11. SCALAR_ID
+What it Represents: A numeric code for the scalar factor.
+
+Example Value: 0
+This code internally indicates the type of scalar factor (“units,” in this case).
+
+12. VECTOR
+What it Represents: A unique series identifier used by Statistics Canada’s data tables to differentiate one particular data series from others.
+
+Example Value: v73953257
+If you are downloading multiple indicators or time points, this code helps you identify which series the row belongs to.
+
+13. COORDINATE
+What it Represents: The dimensional coordinate in a multi-dimensional data table. Statistics Canada often structures data in “cubes,” where COORDINATE positions help locate the precise cell in that cube.
+
+Example Value: 1.1.1.5.1
+Each digit or sub-digit typically corresponds to a different dimension (e.g., time, geography, indicator, etc.), enabling you to trace the data point in a pivoted or multidimensional format.
+
+14. VALUE
+What it Represents: The numerical value of the data being measured.
+
+Example Value: 3037049
+Indicates that 3,037,049 persons (age 15+) in Canada reported having experienced a major depressive episode in their lifetime for the year 2002. (This is a hypothetical example interpretation based on the snippet.)
+
+15. STATUS
+What it Represents: The status of the data point (e.g., whether it is preliminary, final, or revised).
+
+Example Value: (empty in your example)
+Typically, you might see codes like “F” (final), “P” (preliminary), or “R” (revised). If empty, it may indicate “final” or “no special status.”
+
+16. SYMBOL
+What it Represents: This field may display special symbols (e.g., “E” for “use with caution,” “F” for “too unreliable to be published,” etc.).
+
+Example Value: (empty in your example)
+An empty cell means there is no special caution or data note.
+
+17. TERMINATED
+What it Represents: Indicates if the data series is terminated/archived.
+
+Example Value: (empty in your example)
+Means the series is likely still ongoing or not flagged as ended.
+
+18. DECIMALS
+What it Represents: The number of decimal places for the numeric values.
+
+Example Value: 0
+Means the value is an integer (no decimal portion).
