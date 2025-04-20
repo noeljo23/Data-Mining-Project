@@ -18,7 +18,7 @@ from xgboost import XGBRegressor
 from lightgbm import LGBMRegressor
 from catboost import CatBoostRegressor
 
-pipeline = pickle.load(open('champion_pipeline.pkl', 'rb'))(open('champion_pipeline.pkl', 'rb'))
+pipeline = pickle.load(open('champion_pipeline.pkl', 'rb'))
 vec = pickle.load(open('vectorizer.pkl', 'rb'))
 lda = pickle.load(open('lda_model.pkl', 'rb'))
 
