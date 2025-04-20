@@ -4,10 +4,21 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-import os
-st.write("Files in app directory:", os.listdir('.'))
-pipeline = pickle.load(open('champion_pipeline.pkl', 'rb'))
-pipeline = pickle.load(open('champion_pipeline.pkl', 'rb'))
+import streamlit as st
+import pandas as pd
+import numpy as np
+import pickle
+
+# Import model dependencies to ensure pickle unpacks correctly
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
+from xgboost import XGBRegressor
+from lightgbm import LGBMRegressor
+from catboost import CatBoostRegressor
+
+pipeline = pickle.load(open('champion_pipeline.pkl', 'rb'))(open('champion_pipeline.pkl', 'rb'))
 vec = pickle.load(open('vectorizer.pkl', 'rb'))
 lda = pickle.load(open('lda_model.pkl', 'rb'))
 
