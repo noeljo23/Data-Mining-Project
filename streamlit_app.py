@@ -4,7 +4,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-
+import os
+st.write("Files in app directory:", os.listdir('.'))
+pipeline = pickle.load(open('champion_pipeline.pkl', 'rb'))
 pipeline = pickle.load(open('champion_pipeline.pkl', 'rb'))
 vec = pickle.load(open('vectorizer.pkl', 'rb'))
 lda = pickle.load(open('lda_model.pkl', 'rb'))
